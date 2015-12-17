@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2078D7731C23753F003A5E9D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2078D7721C23753F003A5E9D /* CoreDataHelper.swift */; };
 		20DE542D1C226E4000DAE13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE542C1C226E4000DAE13C /* AppDelegate.swift */; };
 		20DE54301C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20DE542E1C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld */; };
 		20DE54351C226E4000DAE13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DE54331C226E4000DAE13C /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2078D7721C23753F003A5E9D /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		20DE54271C226E4000DAE13C /* atsu-rss-reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atsu-rss-reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DE542B1C226E4000DAE13C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DE542C1C226E4000DAE13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				20DE54531C226FC200DAE13C /* iTunesJSONHelper.swift */,
+				2078D7721C23753F003A5E9D /* CoreDataHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				20DE54581C22880E00DAE13C /* TableViewController.swift in Sources */,
 				20DE54301C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld in Sources */,
+				2078D7731C23753F003A5E9D /* CoreDataHelper.swift in Sources */,
 				20DE54561C22704600DAE13C /* AppEntry.swift in Sources */,
 				20DE545A1C228A7700DAE13C /* TableViewCell.swift in Sources */,
 				20DE542D1C226E4000DAE13C /* AppDelegate.swift in Sources */,

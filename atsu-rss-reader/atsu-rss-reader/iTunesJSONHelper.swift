@@ -45,7 +45,7 @@ public class iTunesJSONHelper: NSObject {
                         appEntries.append(appEntry)
                         
                         //TESTING
-                        NSLog("Img URL: %@", imageString)
+                        //NSLog("Img URL: %@", imageString)
                         
                     }
                     
