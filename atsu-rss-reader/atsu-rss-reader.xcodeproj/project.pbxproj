@@ -14,6 +14,8 @@
 		20DE54371C226E4000DAE13C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DE54361C226E4000DAE13C /* Images.xcassets */; };
 		20DE543A1C226E4000DAE13C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20DE54381C226E4000DAE13C /* LaunchScreen.xib */; };
 		20DE54461C226E4000DAE13C /* atsu_rss_readerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54451C226E4000DAE13C /* atsu_rss_readerTests.swift */; };
+		20DE54541C226FC200DAE13C /* iTunesJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54531C226FC200DAE13C /* iTunesJSONHelper.swift */; };
+		20DE54561C22704600DAE13C /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54551C22704600DAE13C /* AppEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		20DE543F1C226E4000DAE13C /* atsu-rss-readerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atsu-rss-readerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DE54441C226E4000DAE13C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DE54451C226E4000DAE13C /* atsu_rss_readerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atsu_rss_readerTests.swift; sourceTree = "<group>"; };
+		20DE54531C226FC200DAE13C /* iTunesJSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesJSONHelper.swift; sourceTree = "<group>"; };
+		20DE54551C22704600DAE13C /* AppEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				20DE542C1C226E4000DAE13C /* AppDelegate.swift */,
-				20DE54311C226E4000DAE13C /* ViewController.swift */,
+				20DE544F1C226EE500DAE13C /* Model */,
+				20DE54501C226EEB00DAE13C /* View */,
+				20DE54511C226F0200DAE13C /* Controller */,
 				20DE54331C226E4000DAE13C /* Main.storyboard */,
+				20DE54521C226F1A00DAE13C /* Helper */,
 				20DE54361C226E4000DAE13C /* Images.xcassets */,
 				20DE54381C226E4000DAE13C /* LaunchScreen.xib */,
 				20DE542E1C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld */,
@@ -113,6 +120,37 @@
 				20DE54441C226E4000DAE13C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20DE544F1C226EE500DAE13C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20DE54551C22704600DAE13C /* AppEntry.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		20DE54501C226EEB00DAE13C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		20DE54511C226F0200DAE13C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20DE54311C226E4000DAE13C /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		20DE54521C226F1A00DAE13C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				20DE54531C226FC200DAE13C /* iTunesJSONHelper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +255,9 @@
 			files = (
 				20DE54321C226E4000DAE13C /* ViewController.swift in Sources */,
 				20DE54301C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld in Sources */,
+				20DE54561C22704600DAE13C /* AppEntry.swift in Sources */,
 				20DE542D1C226E4000DAE13C /* AppDelegate.swift in Sources */,
+				20DE54541C226FC200DAE13C /* iTunesJSONHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
