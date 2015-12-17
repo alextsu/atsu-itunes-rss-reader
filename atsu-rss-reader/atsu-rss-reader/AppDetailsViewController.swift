@@ -10,10 +10,19 @@ import UIKit
 
 class AppDetailsViewController: UIViewController {
 
+    var detailsAppEntry : AppEntry!
+    
+    @IBOutlet weak var appIconImage: UIImageView!
+    @IBOutlet weak var summaryLabel: UITextView!
+    @IBOutlet weak var detailsLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = detailsAppEntry.appName
+        
+
     }
 
     override func didReceiveMemoryWarning() {

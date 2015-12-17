@@ -82,9 +82,80 @@
                     <view key="view" contentMode="scaleToFill" id="ilp-ST-rCd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qoy-cc-jMZ">
+                                <rect key="frame" x="-8" y="574" width="391" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uJI-Sk-LtH"/>
+                                    <barButtonItem title="Save to Favorites" id="Hgi-h0-3dV"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dFB-Me-usS"/>
+                                    <barButtonItem title="App Store" id="bwF-VT-DWc"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nGf-U5-TRy"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mv-iY-2LR">
+                                <rect key="frame" x="16" y="64" width="343" height="510"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lmc-pJ-Pvd">
+                                        <rect key="frame" x="121" y="8" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="7Pn-JM-CGp"/>
+                                            <constraint firstAttribute="height" constant="100" id="DTV-4k-b01"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ky-CT-5x1">
+                                        <rect key="frame" x="25" y="133" width="293" height="314"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detailed Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt1-sM-UiV">
+                                        <rect key="frame" x="0.0" y="472" width="343" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Lmc-pJ-Pvd" secondAttribute="centerX" id="06m-2V-aDX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mt1-sM-UiV" secondAttribute="trailing" id="0Kq-Qp-na2"/>
+                                    <constraint firstItem="Mt1-sM-UiV" firstAttribute="top" secondItem="0ky-CT-5x1" secondAttribute="bottom" constant="25" id="QRW-Ir-dud"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ky-CT-5x1" secondAttribute="trailing" constant="25" id="Wcs-AM-lne"/>
+                                    <constraint firstItem="0ky-CT-5x1" firstAttribute="top" secondItem="Lmc-pJ-Pvd" secondAttribute="bottom" constant="25" id="ZiX-Fv-FuN"/>
+                                    <constraint firstAttribute="centerY" secondItem="Lmc-pJ-Pvd" secondAttribute="centerY" id="cgJ-r0-XXW"/>
+                                    <constraint firstItem="Mt1-sM-UiV" firstAttribute="leading" secondItem="9mv-iY-2LR" secondAttribute="leading" id="daf-zc-Qne"/>
+                                    <constraint firstItem="Lmc-pJ-Pvd" firstAttribute="top" secondItem="9mv-iY-2LR" secondAttribute="top" constant="8" id="fOY-tS-0Um"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mt1-sM-UiV" secondAttribute="bottom" constant="17" id="mLf-km-r0c"/>
+                                    <constraint firstItem="0ky-CT-5x1" firstAttribute="leading" secondItem="9mv-iY-2LR" secondAttribute="leading" constant="25" id="uKe-b8-TET"/>
+                                    <constraint firstItem="0ky-CT-5x1" firstAttribute="leading" secondItem="9mv-iY-2LR" secondAttribute="leading" constant="25" id="xCK-ej-2Jb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cgJ-r0-XXW"/>
+                                        <exclude reference="uKe-b8-TET"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qoy-cc-jMZ" secondAttribute="trailing" constant="-24" id="44s-ik-LfX"/>
+                            <constraint firstItem="9mv-iY-2LR" firstAttribute="leading" secondItem="ilp-ST-rCd" secondAttribute="leadingMargin" id="56k-uU-dO3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9mv-iY-2LR" secondAttribute="trailing" id="98h-bW-ZAt"/>
+                            <constraint firstItem="Qoy-cc-jMZ" firstAttribute="leading" secondItem="ilp-ST-rCd" secondAttribute="leadingMargin" constant="-24" id="SRx-aV-GbK"/>
+                            <constraint firstItem="XLj-6v-rVj" firstAttribute="top" secondItem="Qoy-cc-jMZ" secondAttribute="bottom" id="VPo-vW-yXa"/>
+                            <constraint firstItem="9mv-iY-2LR" firstAttribute="top" secondItem="bnV-cO-2r3" secondAttribute="bottom" id="fRQ-Gl-iXf"/>
+                            <constraint firstItem="Qoy-cc-jMZ" firstAttribute="top" secondItem="9mv-iY-2LR" secondAttribute="bottom" id="uuA-jg-n15"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="appIconImage" destination="Lmc-pJ-Pvd" id="VzE-z1-T8u"/>
+                        <outlet property="detailsLabel" destination="Mt1-sM-UiV" id="QLB-A2-N9x"/>
+                        <outlet property="summaryLabel" destination="0ky-CT-5x1" id="rZa-au-Zz4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2Y-IN-p9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
