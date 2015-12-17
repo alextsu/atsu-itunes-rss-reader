@@ -22,7 +22,16 @@ class AppDetailsViewController: UIViewController {
 
         self.title = detailsAppEntry.appName
         
-
+        //set the app icon image
+        let url = NSURL(string: detailsAppEntry.iconLink)
+        let data = NSData(contentsOfURL: url!)
+        self.appIconImage.image = UIImage(data: data!)
+        
+        //set the summary text
+        self.summaryLabel.text = detailsAppEntry.summary
+        
+        //set the additional details
+        self.detailsLabel.text = detailsAppEntry.category + " // " + detailsAppEntry.releaseDate + " // " + detailsAppEntry.creator
     }
 
     override func didReceiveMemoryWarning() {
