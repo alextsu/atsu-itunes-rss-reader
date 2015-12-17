@@ -36,6 +36,8 @@ public class iTunesJSONHelper: NSObject {
                         let category: String = ((entry["category"] as! NSDictionary)["attributes"] as! NSDictionary)["label"] as! String
                         let releaseDate: String = ((entry["im:releaseDate"] as! NSDictionary)["attributes"] as!NSDictionary)["label"] as! String
                         let creator: String = (entry["im:artist"] as! NSDictionary)["label"] as! String
+                        let link: String = ((entry["link"] as! NSDictionary)["attributes"] as! NSDictionary)["href"] as! String
+                        
                         
                         //For the image, load a url into a UIImage to be stored in the AppEntry model
                         //Note: For simplicity, I'm making a choice to do this synchronously.
@@ -43,12 +45,13 @@ public class iTunesJSONHelper: NSObject {
                         let imageString : String = ((entry["im:image"] as! NSArray).objectAtIndex(2) as! NSDictionary)["label"] as! String
                         let appImage : UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: imageString)!)!)!
                     
+                        
                         //Instantiate a new app entry and append it to the array
-                        let appEntry:AppEntry = AppEntry(appName: appName, icon: appImage, summary: summary, category: category, releaseDate: releaseDate, creator: creator)
+                        let appEntry:AppEntry = AppEntry(appName: appName, icon: appImage, summary: summary, category: category, releaseDate: releaseDate, creator: creator, link: link)
                         appEntries.append(appEntry)
                         
                         //TESTING
-                        //NSLog("Image URL: %@", imageString)
+                        NSLog(" URL: %@", link)
                         
                     }
                     

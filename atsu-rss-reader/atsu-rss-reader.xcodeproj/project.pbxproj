@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		20DE542D1C226E4000DAE13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE542C1C226E4000DAE13C /* AppDelegate.swift */; };
 		20DE54301C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20DE542E1C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld */; };
-		20DE54321C226E4000DAE13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54311C226E4000DAE13C /* ViewController.swift */; };
 		20DE54351C226E4000DAE13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DE54331C226E4000DAE13C /* Main.storyboard */; };
 		20DE54371C226E4000DAE13C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DE54361C226E4000DAE13C /* Images.xcassets */; };
 		20DE543A1C226E4000DAE13C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20DE54381C226E4000DAE13C /* LaunchScreen.xib */; };
 		20DE54461C226E4000DAE13C /* atsu_rss_readerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54451C226E4000DAE13C /* atsu_rss_readerTests.swift */; };
 		20DE54541C226FC200DAE13C /* iTunesJSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54531C226FC200DAE13C /* iTunesJSONHelper.swift */; };
 		20DE54561C22704600DAE13C /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54551C22704600DAE13C /* AppEntry.swift */; };
+		20DE54581C22880E00DAE13C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54571C22880E00DAE13C /* TableViewController.swift */; };
+		20DE545A1C228A7700DAE13C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54591C228A7700DAE13C /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +34,6 @@
 		20DE542B1C226E4000DAE13C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DE542C1C226E4000DAE13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DE542F1C226E4000DAE13C /* atsu_rss_reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = atsu_rss_reader.xcdatamodel; sourceTree = "<group>"; };
-		20DE54311C226E4000DAE13C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20DE54341C226E4000DAE13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20DE54361C226E4000DAE13C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20DE54391C226E4000DAE13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		20DE54451C226E4000DAE13C /* atsu_rss_readerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atsu_rss_readerTests.swift; sourceTree = "<group>"; };
 		20DE54531C226FC200DAE13C /* iTunesJSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesJSONHelper.swift; sourceTree = "<group>"; };
 		20DE54551C22704600DAE13C /* AppEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
+		20DE54571C22880E00DAE13C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		20DE54591C228A7700DAE13C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		20DE54501C226EEB00DAE13C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				20DE54591C228A7700DAE13C /* TableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -140,7 +143,7 @@
 		20DE54511C226F0200DAE13C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				20DE54311C226E4000DAE13C /* ViewController.swift */,
+				20DE54571C22880E00DAE13C /* TableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -253,9 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DE54321C226E4000DAE13C /* ViewController.swift in Sources */,
+				20DE54581C22880E00DAE13C /* TableViewController.swift in Sources */,
 				20DE54301C226E4000DAE13C /* atsu_rss_reader.xcdatamodeld in Sources */,
 				20DE54561C22704600DAE13C /* AppEntry.swift in Sources */,
+				20DE545A1C228A7700DAE13C /* TableViewCell.swift in Sources */,
 				20DE542D1C226E4000DAE13C /* AppDelegate.swift in Sources */,
 				20DE54541C226FC200DAE13C /* iTunesJSONHelper.swift in Sources */,
 			);

@@ -15,13 +15,15 @@ class AppEntry: NSObject {
     var category: String
     var releaseDate: String
     var creator: String
+    var link: String
     
-    init (appName: String, icon: UIImage, summary: String, category: String, releaseDate: String, creator: String) {
+    init (appName: String, icon: UIImage, summary: String, category: String, releaseDate: String, creator: String, link: String) {
         self.appName = appName
         self.icon = icon
         self.summary = summary
         self.category = category
         self.releaseDate = releaseDate
         self.creator = creator
+        self.link = link
     }
 }
