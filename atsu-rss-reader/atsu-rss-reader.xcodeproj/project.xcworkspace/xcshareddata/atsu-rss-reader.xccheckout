@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A0167A33-2133-4658-B5FD-F9873161615D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>atsu-rss-reader</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>621848849FC271971C67DDF4F961E3F6EB297AC1</key>
 		<string>https://github.com/alextsu/atsu-itunes-rss-reader.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>atsu-rss-reader/atsu-rss-reader.xcodeproj/project.xcworkspace</string>
+	<string>atsu-rss-reader/atsu-rss-reader.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>621848849FC271971C67DDF4F961E3F6EB297AC1</key>

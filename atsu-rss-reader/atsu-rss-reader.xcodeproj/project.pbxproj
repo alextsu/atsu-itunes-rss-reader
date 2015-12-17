@@ -17,6 +17,7 @@
 		20DE54561C22704600DAE13C /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54551C22704600DAE13C /* AppEntry.swift */; };
 		20DE54581C22880E00DAE13C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54571C22880E00DAE13C /* TableViewController.swift */; };
 		20DE545A1C228A7700DAE13C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE54591C228A7700DAE13C /* TableViewCell.swift */; };
+		20DE545C1C22981B00DAE13C /* AppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE545B1C22981B00DAE13C /* AppDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		20DE54551C22704600DAE13C /* AppEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		20DE54571C22880E00DAE13C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		20DE54591C228A7700DAE13C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		20DE545B1C22981B00DAE13C /* AppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				20DE54571C22880E00DAE13C /* TableViewController.swift */,
+				20DE545B1C22981B00DAE13C /* AppDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				20DE54561C22704600DAE13C /* AppEntry.swift in Sources */,
 				20DE545A1C228A7700DAE13C /* TableViewCell.swift in Sources */,
 				20DE542D1C226E4000DAE13C /* AppDelegate.swift in Sources */,
+				20DE545C1C22981B00DAE13C /* AppDetailsViewController.swift in Sources */,
 				20DE54541C226FC200DAE13C /* iTunesJSONHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +461,7 @@
 				20DE544B1C226E4000DAE13C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20DE544C1C226E4000DAE13C /* Build configuration list for PBXNativeTarget "atsu-rss-readerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +470,7 @@
 				20DE544E1C226E4000DAE13C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -50,11 +50,13 @@ class TableViewController: UITableViewController {
             cell.appNameLabel.text = cellAppEntry.appName
             cell.categoryLabel.text = cellAppEntry.category
             
+            
+            //Note: For simplicity, the following implementation uses synchronous loading of UIImages
+            //Note: For optimal performance, the icons can 1) be cached and 2) be loaded asynchronously via GCD
             let url = NSURL(string: cellAppEntry.iconLink)
             let data = NSData(contentsOfURL: url!)
             cell.appIconImageView.image = UIImage(data: data!)
             
-            //cell.appIconImageView = UIImageView(image: cellAppEntry.icon)
             
         }
         
