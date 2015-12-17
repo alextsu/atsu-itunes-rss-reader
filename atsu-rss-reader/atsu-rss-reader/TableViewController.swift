@@ -48,8 +48,14 @@ class TableViewController: UITableViewController {
 
         if let cellAppEntry : AppEntry = self.appEntries?[indexPath.row] {
             cell.appNameLabel.text = cellAppEntry.appName
-            cell.appIconImageView = UIImageView(image: cellAppEntry.icon)
             cell.categoryLabel.text = cellAppEntry.category
+            
+            let url = NSURL(string: cellAppEntry.iconLink)
+            let data = NSData(contentsOfURL: url!)
+            cell.appIconImageView.image = UIImage(data: data!)
+            
+            //cell.appIconImageView = UIImageView(image: cellAppEntry.icon)
+            
         }
         
         

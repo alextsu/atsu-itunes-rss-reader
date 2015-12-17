@@ -10,16 +10,16 @@ import UIKit
 
 class AppEntry: NSObject {
     var appName: String
-    var icon: UIImage
+    var iconLink: String
     var summary: String
     var category: String
     var releaseDate: String
     var creator: String
     var link: String
     
-    init (appName: String, icon: UIImage, summary: String, category: String, releaseDate: String, creator: String, link: String) {
+    init (appName: String, iconLink: String, summary: String, category: String, releaseDate: String, creator: String, link: String) {
         self.appName = appName
-        self.icon = icon
+        self.iconLink = iconLink
         self.summary = summary
         self.category = category
         self.releaseDate = releaseDate
