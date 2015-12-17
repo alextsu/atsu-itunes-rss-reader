@@ -15,6 +15,7 @@ class AppDetailsViewController: UIViewController {
     @IBOutlet weak var appIconImage: UIImageView!
     @IBOutlet weak var summaryLabel: UITextView!
     @IBOutlet weak var detailsLabel: UILabel!
+
     
     
     override func viewDidLoad() {
@@ -38,8 +39,11 @@ class AppDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    @IBAction func appStoreLink(sender: UIBarButtonItem) {
+        UIApplication.sharedApplication().openURL(NSURL(string:detailsAppEntry.link)!)
+    }
+    
     /*
     // MARK: - Navigation
 

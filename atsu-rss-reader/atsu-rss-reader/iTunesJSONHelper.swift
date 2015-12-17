@@ -21,7 +21,7 @@ public class iTunesJSONHelper: NSObject {
         let feedData:NSData? = NSData(contentsOfURL: NSURL(string: feedURL)!)
         
         //parse JSON using NSJSONSerialization and convert to NSDictionary
-        if let feedDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(feedData!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+        if let feedDictionary: NSDictionary = (try? NSJSONSerialization.JSONObjectWithData(feedData!, options: NSJSONReadingOptions.MutableContainers)) as? NSDictionary {
             
             //dive down into the array of entries
             if let feed = feedDictionary["feed"] as? NSDictionary {
