@@ -13,18 +13,18 @@ let coreDataHelper = CoreDataHelper()
 
 public class CoreDataHelper: NSObject {
     
-    
+    //Outputs an array of AppEntries corresponding to apps that the user has favorited
     func getFavorites() -> [AppEntry]? {
         
         var appEntries = [AppEntry]()
         
+        //Make fetch request for AppEntry entities
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         let fetchRequest = NSFetchRequest(entityName:"AppEntry")
-        
- 
         let fetchedResults: [NSManagedObject]!
         
+        //Execute fetch request
         do {
             fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
         } catch let error as NSError {
@@ -34,6 +34,7 @@ public class CoreDataHelper: NSObject {
         
         for appEntryManagedObject in fetchedResults {
             
+            //Get each property of the entity and store in string
             let appName: String = appEntryManagedObject.valueForKey("appname") as! String
             let summary: String = appEntryManagedObject.valueForKey("summary") as! String
             let category: String = appEntryManagedObject.valueForKey("category") as! String
@@ -52,6 +53,7 @@ public class CoreDataHelper: NSObject {
         return appEntries
     }
     
+    //Add app entry from parameter into Core Data. Return true if successful and false of otherwise
     func addToFavorites(app: AppEntry) -> Bool{
         
         //Check first if the app is already a favorite
@@ -59,11 +61,13 @@ public class CoreDataHelper: NSObject {
             return false
         }
         
+        //Get the entity in the managed context
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         let entity = NSEntityDescription.entityForName("AppEntry", inManagedObjectContext: managedContext)
         let appEntryManagedObject = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         
+        //Set each property for the given entity
         appEntryManagedObject.setValue(app.appName, forKey: "appname")
         appEntryManagedObject.setValue(app.category, forKey: "category")
         appEntryManagedObject.setValue(app.creator, forKey: "creator")
@@ -72,6 +76,7 @@ public class CoreDataHelper: NSObject {
         appEntryManagedObject.setValue(app.releaseDate, forKey: "releasedate")
         appEntryManagedObject.setValue(app.summary, forKey: "summary")
         
+        //Save the managed object
         do {
             try managedContext.save()
             return true

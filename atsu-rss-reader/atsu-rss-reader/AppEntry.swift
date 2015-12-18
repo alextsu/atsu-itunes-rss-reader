@@ -8,6 +8,8 @@
 
 import UIKit
 
+//App Entry object with all variables
+
 class AppEntry: NSObject {
     var appName: String
     var iconLink: String

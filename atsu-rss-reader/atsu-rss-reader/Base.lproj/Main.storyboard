@@ -108,14 +108,14 @@
                                 <rect key="frame" x="16" y="64" width="343" height="510"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lmc-pJ-Pvd">
-                                        <rect key="frame" x="121" y="8" width="100" height="100"/>
+                                        <rect key="frame" x="136" y="8" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="7Pn-JM-CGp"/>
-                                            <constraint firstAttribute="height" constant="100" id="DTV-4k-b01"/>
+                                            <constraint firstAttribute="width" constant="70" id="7Pn-JM-CGp"/>
+                                            <constraint firstAttribute="height" constant="70" id="DTV-4k-b01"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ky-CT-5x1">
-                                        <rect key="frame" x="25" y="133" width="293" height="321"/>
+                                        <rect key="frame" x="25" y="93" width="293" height="371"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -132,9 +132,9 @@
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="Lmc-pJ-Pvd" secondAttribute="centerX" id="06m-2V-aDX"/>
                                     <constraint firstAttribute="trailing" secondItem="Mt1-sM-UiV" secondAttribute="trailing" id="0Kq-Qp-na2"/>
-                                    <constraint firstItem="Mt1-sM-UiV" firstAttribute="top" secondItem="0ky-CT-5x1" secondAttribute="bottom" constant="25" id="QRW-Ir-dud"/>
+                                    <constraint firstItem="Mt1-sM-UiV" firstAttribute="top" secondItem="0ky-CT-5x1" secondAttribute="bottom" constant="15" id="QRW-Ir-dud"/>
                                     <constraint firstAttribute="trailing" secondItem="0ky-CT-5x1" secondAttribute="trailing" constant="25" id="Wcs-AM-lne"/>
-                                    <constraint firstItem="0ky-CT-5x1" firstAttribute="top" secondItem="Lmc-pJ-Pvd" secondAttribute="bottom" constant="25" id="ZiX-Fv-FuN"/>
+                                    <constraint firstItem="0ky-CT-5x1" firstAttribute="top" secondItem="Lmc-pJ-Pvd" secondAttribute="bottom" constant="15" id="ZiX-Fv-FuN"/>
                                     <constraint firstAttribute="centerY" secondItem="Lmc-pJ-Pvd" secondAttribute="centerY" id="cgJ-r0-XXW"/>
                                     <constraint firstItem="Mt1-sM-UiV" firstAttribute="leading" secondItem="9mv-iY-2LR" secondAttribute="leading" id="daf-zc-Qne"/>
                                     <constraint firstItem="Lmc-pJ-Pvd" firstAttribute="top" secondItem="9mv-iY-2LR" secondAttribute="top" constant="8" id="fOY-tS-0Um"/>

@@ -52,7 +52,7 @@ class AppDetailsViewController: UIViewController {
     @IBAction func saveToFavorites(sender: UIBarButtonItem) {
         let saveSuccess = coreDataHelper.addToFavorites(detailsAppEntry)
         
-        //If Save was unsuccessful, present a UIAlert informing user
+        //If Save was unsuccessful, present a UIAlert informing user there was an error or the element is already a Favorite
         if saveSuccess == false {
             
             let alert = UIAlertController(title: "Error", message: "This item could not be added to Favorites. Either the item is already a Favorite or something went wrong.", preferredStyle: UIAlertControllerStyle.Alert)

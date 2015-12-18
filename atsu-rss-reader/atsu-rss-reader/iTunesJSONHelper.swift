@@ -27,7 +27,6 @@ public class iTunesJSONHelper: NSObject {
             if let feed = feedDictionary["feed"] as? NSDictionary {
                 if let entries = feed["entry"] as? NSArray {
                     
-
                     for entry in entries {
                         
                         //For the string properties, drill down and store these labels as constants for readability
@@ -46,11 +45,8 @@ public class iTunesJSONHelper: NSObject {
                         
                         
                     }
-                    
                 }
             }
-            
-            
         }
         
         return appEntries
