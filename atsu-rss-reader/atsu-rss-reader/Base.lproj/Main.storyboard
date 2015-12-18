@@ -264,7 +264,7 @@
         <scene sceneID="40m-zi-dP9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dRY-50-DjD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top Apps" id="Nhw-dV-MVo"/>
+                    <tabBarItem key="tabBarItem" title="Top Apps" image="List-50.png" selectedImage="List-50.png" id="Nhw-dV-MVo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2J7-fO-Opb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -283,7 +283,7 @@
         <scene sceneID="m2i-yq-TDF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ypG-yJ-IHm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="rx2-CM-FLJ"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Star-50.png" selectedImage="Star-50.png" id="rx2-CM-FLJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tp6-5r-RqL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -299,6 +299,10 @@
             <point key="canvasLocation" x="1428" y="1156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="List-50.png" width="25" height="25"/>
+        <image name="Star-50.png" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TVJ-Lz-icb"/>
     </inferredMetricsTieBreakers>
