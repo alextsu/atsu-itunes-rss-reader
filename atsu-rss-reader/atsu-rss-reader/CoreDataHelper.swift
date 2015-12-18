@@ -32,7 +32,6 @@ public class CoreDataHelper: NSObject {
             return nil
         }
         
-        
         for appEntryManagedObject in fetchedResults {
             
             let appName: String = appEntryManagedObject.valueForKey("appname") as! String

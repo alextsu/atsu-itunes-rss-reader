@@ -11,12 +11,12 @@ import UIKit
 class AppDetailsViewController: UIViewController {
 
     var detailsAppEntry : AppEntry!
+    var fromFavorites : Bool!
     
     @IBOutlet weak var appIconImage: UIImageView!
     @IBOutlet weak var summaryLabel: UITextView!
     @IBOutlet weak var detailsLabel: UILabel!
-
-    
+    @IBOutlet weak var saveToFavoritesButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,11 @@ class AppDetailsViewController: UIViewController {
         
         //set the additional details
         self.detailsLabel.text = detailsAppEntry.category + " // " + detailsAppEntry.releaseDate + " // " + detailsAppEntry.creator
+        
+        //if we're coming from the favorites table view, remove the option to save to favorites
+        if fromFavorites == true {
+            self.saveToFavoritesButton.enabled = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,14 +49,10 @@ class AppDetailsViewController: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string:detailsAppEntry.link)!)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveToFavorites(sender: UIBarButtonItem) {
+        coreDataHelper.addToFavorites(detailsAppEntry)
     }
-    */
+    
+    
 
 }

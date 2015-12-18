@@ -1,45 +1,49 @@
 //
-//  TableViewController.swift
+//  FavoritesTableViewController.swift
 //  atsu-rss-reader
 //
 //  Created by Alexander Tsu on 12/17/15.
-//  Copyright (c) 2015 Alexander Tsu. All rights reserved.
+//  Copyright © 2015 Alexander Tsu. All rights reserved.
 //
 
 import UIKit
 
-class TableViewController: UITableViewController {
-
-    let appEntries: [AppEntry]? = itunesHelper.getFeed()
+class FavoritesTableViewController: UITableViewController {
+    var appEntries: [AppEntry]? = coreDataHelper.getFavorites()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        appEntries = coreDataHelper.getFavorites()
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return self.appEntries!.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("appCell", forIndexPath: indexPath) as! TableViewCell
-
+        
         if let cellAppEntry : AppEntry = self.appEntries?[indexPath.row] {
             cell.appNameLabel.text = cellAppEntry.appName
             cell.categoryLabel.text = cellAppEntry.category
@@ -56,11 +60,11 @@ class TableViewController: UITableViewController {
         
         return cell
     }
-
-
+    
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -69,11 +73,10 @@ class TableViewController: UITableViewController {
             if let indexPath = tableView!.indexPathForCell(cell) {
                 let nextViewController = segue.destinationViewController as! AppDetailsViewController
                 
-                nextViewController.fromFavorites = false
-                nextViewController.detailsAppEntry = self.appEntries?[indexPath.row] 
+                nextViewController.fromFavorites = true
+                nextViewController.detailsAppEntry = self.appEntries?[indexPath.row]
             }
         }
     }
     
-
 }
