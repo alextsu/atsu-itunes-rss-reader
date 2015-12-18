@@ -54,6 +54,11 @@ public class CoreDataHelper: NSObject {
     
     func addToFavorites(app: AppEntry) -> Bool{
         
+        //Check first if the app is already a favorite
+        if isDuplicateEntry(app) == true {
+            return false
+        }
+        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         let entity = NSEntityDescription.entityForName("AppEntry", inManagedObjectContext: managedContext)
@@ -69,11 +74,24 @@ public class CoreDataHelper: NSObject {
         
         do {
             try managedContext.save()
+            return true
         } catch {
             print("Failure to save context: \(error)")
             return false
         }
         
-        return true
+    }
+    
+    //Helper method that verifies that the app is not already a favorite
+    func isDuplicateEntry(app: AppEntry) -> Bool {
+        let appEntries:[AppEntry] = getFavorites()!
+        
+        for entry in appEntries {
+            if entry.appName == app.appName {
+                return true
+            }
+        }
+        
+        return false
     }
 }

@@ -44,8 +44,6 @@ public class iTunesJSONHelper: NSObject {
                         let appEntry:AppEntry = AppEntry(appName: appName, iconLink: imageString, summary: summary, category: category, releaseDate: releaseDate, creator: creator, link: link)
                         appEntries.append(appEntry)
                         
-                        //TESTING
-                        //NSLog("Img URL: %@", imageString)
                         
                     }
                     
